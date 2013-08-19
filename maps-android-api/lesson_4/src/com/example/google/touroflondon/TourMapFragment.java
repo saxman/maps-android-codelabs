@@ -42,9 +42,6 @@ import java.util.Map;
 public class TourMapFragment extends MapFragment
         implements MapLoaderCallbacks.MapDataLoader, GoogleMap.OnInfoWindowClickListener {
 
-    /** Key for the map type in the saved instance state. */
-    public static final String KEY_MAP_TYPE = "map_type";
-
     /** Callbacks for loading data into this TourMapFragment */
     private MapLoaderCallbacks mLoaderCallbacks;
 
@@ -121,10 +118,6 @@ public class TourMapFragment extends MapFragment
                     // only want to set it if we are starting
                     // fresh.
                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LONDON, 12));
-                } else {
-                    // Set the map type to the type that was saved.
-                    mMap.setMapType(mSavedInstanceState.getInt(KEY_MAP_TYPE,
-                            GoogleMap.MAP_TYPE_NORMAL));
                 }
 
                 // Disable the on screen zoom controls.
@@ -141,9 +134,6 @@ public class TourMapFragment extends MapFragment
 
                 // Set an on info window click listener.
                 mMap.setOnInfoWindowClickListener(this);
-
-                // Turn on the my location layer.
-                mMap.setMyLocationEnabled(true);
             }
         }
     }
@@ -170,7 +160,6 @@ public class TourMapFragment extends MapFragment
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt(KEY_MAP_TYPE, mMap.getMapType());
     }
 
     /** Moves the camera back to a position which includes all the POIs. */
@@ -181,8 +170,6 @@ public class TourMapFragment extends MapFragment
      * Show a dialog to allow the user to choose which map type they want.
      */
     private void showMapTypeSelector() {
-        SelectMapTypeDialog dialog = new SelectMapTypeDialog();
-        dialog.show(getFragmentManager(), "maptype");
     }
 
     /**
@@ -207,25 +194,6 @@ public class TourMapFragment extends MapFragment
      * @param type One of the constants listed in {@link SelectMapTypeDialog}.
      */
     public void onSelectMapTypeDialogSelected(int type) {
-        // Get the map type constant that corresponds to the option chosen.
-        int mapType = GoogleMap.MAP_TYPE_NORMAL;
-        switch (type) {
-            case SelectMapTypeDialog.TYPE_NORMAL:
-                mapType = GoogleMap.MAP_TYPE_NORMAL;
-                break;
-            case SelectMapTypeDialog.TYPE_HYBRID:
-                mapType = GoogleMap.MAP_TYPE_HYBRID;
-                break;
-            case SelectMapTypeDialog.TYPE_SATELLITE:
-                mapType = GoogleMap.MAP_TYPE_SATELLITE;
-                break;
-            case SelectMapTypeDialog.TYPE_TERRAIN:
-                mapType = GoogleMap.MAP_TYPE_TERRAIN;
-                break;
-        }
-
-        // Set that map type on the map.
-        mMap.setMapType(mapType);
     }
 
     /**

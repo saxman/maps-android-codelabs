@@ -20,7 +20,7 @@
     <ignored path="android.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/fragment.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367888161832" ignored="false" />
-    <file path="/Dummy.txt" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1369804483244" ignored="false" />
+    <file path="/Dummy.txt" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1369804402084" ignored="false" />
     <file path="/activity_main.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368486150866" ignored="false" />
     <file path="/TourMapFragment.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367974530881" ignored="false" />
     <file path="/MainActivity.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367897729076" ignored="false" />
@@ -139,28 +139,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Util.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Util.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="91" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="60" column="13" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.5305755">
+              <folding>
+                <element signature="e#0#2996#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TourInfoWindowAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/TourInfoWindowAdapter.java">
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="3" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="43" selection-start="2832" selection-end="2832" vertical-scroll-proportion="0.026978416">
+            <state line="34" column="0" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,7 +162,7 @@
       <file leaf-file-name="dimen.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/dimen.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="12" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
+            <state line="22" column="12" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -257,6 +250,22 @@
     <option name="width" value="1676" />
     <option name="height" value="1028" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -283,44 +292,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson 3 - Info Windows" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson 3 - Info Windows" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touroflondon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -331,7 +303,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -340,23 +321,23 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="editor" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lesson 4 - Layers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lesson 3 - Info Windows" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.18655851" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="R32CB017F9F" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="adp2-4.1.2" />
-    <property name="AndroidTargetDevices" value="016e3eaaddd851c4" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
+    <property name="AndroidTargetDevices" value="016e3eaaddd851c4" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -572,18 +553,15 @@
       <workItem from="1367973289006" duration="4604000" />
       <workItem from="1367980863283" duration="13000" />
       <workItem from="1368469560582" duration="16490000" />
-      <workItem from="1368554269450" duration="354000" />
-      <workItem from="1368555296522" duration="40000" />
-      <workItem from="1368581638715" duration="64000" />
-      <workItem from="1368583223283" duration="840000" />
-      <workItem from="1368668336157" duration="1924000" />
-      <workItem from="1368741176528" duration="101000" />
-      <workItem from="1369804482512" duration="67000" />
+      <workItem from="1368554733387" duration="562000" />
+      <workItem from="1368557863088" duration="285000" />
+      <workItem from="1368741278474" duration="36000" />
+      <workItem from="1369804401522" duration="80000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97212000" />
+    <option name="totallyTimeSpent" value="94785000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -703,14 +681,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../libprojects/GooglePlayServices/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/TourMapFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/values-v16/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0" />
+        <state line="18" column="0" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="30" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-12.222222" />
+        <state line="38" column="30" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-12.222222">
+          <folding />
+        </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
@@ -728,9 +722,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-sw600dp/dimen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="11" selection-start="700" selection-end="702" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/dimen.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="12" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
+        <state line="22" column="12" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -761,7 +762,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/tour_simple_list_item_2.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="44" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.7310469" />
+        <state line="27" column="44" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.7310469">
+          <folding />
+        </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
@@ -783,29 +786,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="91" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/TourInfoWindowAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="3" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-sw600dp/dimen.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="11" selection-start="700" selection-end="702" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="43" selection-start="2832" selection-end="2832" vertical-scroll-proportion="0.026978416">
-          <folding />
+        <state line="60" column="13" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.5305755">
+          <folding>
+            <element signature="e#0#2996#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -901,6 +885,17 @@
             <option name="proportions">
               <list>
                 <option value="0.18655851" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

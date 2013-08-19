@@ -18,35 +18,32 @@ package com.example.google.touroflondon;
 
 import com.example.google.R;
 import com.example.google.touroflondon.data.MapLoaderCallbacks;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
+import android.app.Fragment;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 /** An interactive map fragment that shows a tour of London. */
-public class TourMapFragment extends MapFragment implements MapLoaderCallbacks.MapDataLoader {
+public class TourMapFragment extends Fragment implements MapLoaderCallbacks.MapDataLoader {
 
     /** Callbacks for loading data into this TourMapFragment */
     private MapLoaderCallbacks mLoaderCallbacks;
-
-    /** The Google Map object. */
-    private GoogleMap mMap;
 
     /**
      * The saved instance state passed in in onCreate that we need later for
      * setupMapIfNeeded.
      */
     private Bundle mSavedInstanceState;
-
-    /** Starting position for the camera. */
-    public static final LatLng LONDON = new LatLng(51.5, -0.12);
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,13 +58,21 @@ public class TourMapFragment extends MapFragment implements MapLoaderCallbacks.M
         setHasOptionsMenu(true);
     }
 
+    // TODO: Delete this once this class extends MapFragment.
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        TextView textView = new TextView(inflater.getContext());
+        textView.setText("Map Goes Here!!");
+        return textView;
+    }
+
     @Override
     public void onResume() {
         super.onResume();
 
         // See the javadoc for this method for why we should call this here as
         // well..
-        setUpMapIfNeeded();
+        // setUpMapIfNeeded();
     }
 
     /**
@@ -86,26 +91,6 @@ public class TourMapFragment extends MapFragment implements MapLoaderCallbacks.M
      * method in {@link #onResume()} to guarantee that it will be called.
      */
     private void setUpMapIfNeeded() {
-        // Do a null check to confirm that we have not already instantiated the
-        // map.
-        if (mMap == null) {
-            // Try to obtain the map from the SupportMapFragment.
-            mMap = getMap();
-            // Check if we were successful in obtaining the map.
-            if (mMap != null) {
-                // We can now set up the map.
-
-                if (mSavedInstanceState == null) {
-                    // The map automatically saves the camera position so we
-                    // only want to set it if we are starting
-                    // fresh.
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LONDON, 12));
-                }
-
-                // Disable the on screen zoom controls.
-                mMap.getUiSettings().setZoomControlsEnabled(false);
-            }
-        }
     }
 
     @Override

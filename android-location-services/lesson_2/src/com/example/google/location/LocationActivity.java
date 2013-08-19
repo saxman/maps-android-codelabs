@@ -21,7 +21,6 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
 import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
 import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.location.ActivityRecognitionClient;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
@@ -34,9 +33,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.app.Dialog;
-import android.app.PendingIntent;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.location.Location;
 import android.os.Bundle;
@@ -46,10 +43,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import android.view.View;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.Switch;
 import android.widget.TextView;
 
 public class LocationActivity extends FragmentActivity {
@@ -67,20 +60,9 @@ public class LocationActivity extends FragmentActivity {
     private TextView mLocationStatus;
     private LocationCallback mLocationCallback = new LocationCallback();
     private Location mLastLocation;
-    private static final int LOCATION_UPDATES_INTERVAL = 10000; // Setting 10
-                                                                // sec interval
-                                                                // for location
-                                                                // updates
-
-    // Activity Recognition variables
-    private ActivityRecognitionClient mActivityRecognitionClient;
-    private ActivityRecognitionCallback mActivityRecognitionCallback = new ActivityRecognitionCallback();
-    public static final String ACTION_ACTIVITY_RECOGNITION =
-            "com.android.google.codelab.location.LocationActivity.ACTIVITY_RECOGNITION";
-    private static final int ACTIVITY_UPDATES_INTERVAL = 4000;
-    private PendingIntent mActivityRecognitionPendingIntent;
-    private Switch mSwitch;
-    private ActivityRecognitionIntentReceiver mActivityRecognitionIntentReceiver;
+    private final int LOCATION_UPDATES_INTERVAL = 10000; // Setting 10 sec
+                                                         // interval for
+                                                         // location updates
 
     // Geo Fencing variables
 
@@ -112,33 +94,6 @@ public class LocationActivity extends FragmentActivity {
                 mLocationClient.connect();
             }
         }
-
-        // Initialize Action Recognition
-        if (mActivityRecognitionClient == null) {
-            mActivityRecognitionClient =
-                    new ActivityRecognitionClient(this,
-                            mActivityRecognitionCallback, mActivityRecognitionCallback);
-        }
-
-        mSwitch = (Switch) findViewById(R.id.swtich);
-        mSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    startActivityDetection(buttonView);
-                } else {
-                    stopActivityDetection(buttonView);
-                }
-            }
-        });
-
-        if (mActivityRecognitionIntentReceiver == null) {
-            mActivityRecognitionIntentReceiver = new ActivityRecognitionIntentReceiver();
-            registerReceiver(mActivityRecognitionIntentReceiver,
-                    new IntentFilter(LocationActivity.ACTION_ACTIVITY_RECOGNITION));
-        }
-
-        // Initialize Geo Fencing
     }
 
     @Override
@@ -169,8 +124,6 @@ public class LocationActivity extends FragmentActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(mActivityRecognitionIntentReceiver);
-        mActivityRecognitionIntentReceiver = null;
     }
 
     private void checkGooglePlayServiceAvailability(int requestCode) {
@@ -246,7 +199,7 @@ public class LocationActivity extends FragmentActivity {
 
         @Override
         public void onConnected(Bundle connectionHint) {
-            Log.v(LocationActivity.TAG, "Location Client Connected");
+            Log.v(LocationActivity.TAG, "Location Client connected");
 
             // Display last location
             Location location = mLocationClient.getLastLocation();
@@ -314,48 +267,7 @@ public class LocationActivity extends FragmentActivity {
             }
             mLastLocation = location;
         }
+
     };
-
-    private class ActivityRecognitionCallback implements ConnectionCallbacks,
-            OnConnectionFailedListener {
-        @Override
-        public void onConnected(Bundle connectionHint) {
-            Log.v(LocationActivity.TAG, "Activity Recognition Client connected");
-
-            // Request activity updates
-            Intent intent = new Intent(LocationActivity.this,
-                    ActivityRecognitionIntentService.class);
-            intent.setAction(LocationActivity.ACTION_ACTIVITY_RECOGNITION);
-            mActivityRecognitionPendingIntent = PendingIntent.getService(LocationActivity.this, 0,
-                    intent,
-                    PendingIntent.FLAG_UPDATE_CURRENT);
-            mActivityRecognitionClient.requestActivityUpdates(ACTIVITY_UPDATES_INTERVAL,
-                    mActivityRecognitionPendingIntent);
-        }
-
-        @Override
-        public void onDisconnected() {
-            Log.v(LocationActivity.TAG, "Activity Recognition Client disconnected by the system");
-        }
-
-        @Override
-        public void onConnectionFailed(ConnectionResult result) {
-            Log.v(LocationActivity.TAG,
-                    "Activity Recognition Client connection failed " + result.getErrorCode());
-        }
-    };
-
-    public void startActivityDetection(View v) {
-        if (!mActivityRecognitionClient.isConnected()) {
-            mActivityRecognitionClient.connect();
-        }
-    }
-
-    public void stopActivityDetection(View v) {
-        if (mActivityRecognitionClient.isConnected()) {
-            mActivityRecognitionClient.removeActivityUpdates(mActivityRecognitionPendingIntent);
-            mActivityRecognitionClient.disconnect();
-        }
-    }
 
 }

@@ -20,7 +20,7 @@
     <ignored path="android.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/fragment.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367888161832" ignored="false" />
-    <file path="/Dummy.txt" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1369804590418" ignored="false" />
+    <file path="/Dummy.txt" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1369804551314" ignored="false" />
     <file path="/activity_main.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368486150866" ignored="false" />
     <file path="/TourMapFragment.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367974530881" ignored="false" />
     <file path="/MainActivity.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367897729076" ignored="false" />
@@ -151,7 +151,7 @@
       <file leaf-file-name="TourInfoWindowAdapter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/TourInfoWindowAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="25" selection-start="944" selection-end="944" vertical-scroll-proportion="0.026929982">
+            <state line="26" column="25" selection-start="944" selection-end="944" vertical-scroll-proportion="0.02688172">
               <folding />
             </state>
           </provider>
@@ -283,16 +283,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -303,7 +294,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,20 +315,20 @@
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lesson 6 - Shapes" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.18655851" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="R32CB017F9F" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="adp2-4.1.2" />
-    <property name="AndroidTargetDevices" value="016e3eaaddd851c4" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
+    <property name="AndroidTargetDevices" value="016e3eaaddd851c4" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -544,16 +544,17 @@
       <workItem from="1367973289006" duration="4604000" />
       <workItem from="1367980863283" duration="13000" />
       <workItem from="1368469560582" duration="16490000" />
-      <workItem from="1368494859331" duration="746000" />
-      <workItem from="1368555412719" duration="75000" />
-      <workItem from="1368555594048" duration="24000" />
-      <workItem from="1368741095558" duration="43000" />
-      <workItem from="1369804589933" duration="30000" />
+      <workItem from="1368555338166" duration="71000" />
+      <workItem from="1368555545435" duration="47000" />
+      <workItem from="1368580777508" duration="311000" />
+      <workItem from="1368741139677" duration="36000" />
+      <workItem from="1369804550653" duration="38000" />
+      <workItem from="1369804620941" duration="22000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94740000" />
+    <option name="totallyTimeSpent" value="94347000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -582,7 +583,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32819384" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32857144" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969324" sideWeight="0.078193836" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -591,8 +592,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969324" sideWeight="0.67180616" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24846625" sideWeight="0.67180616" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819384" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24846625" sideWeight="0.67142856" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944787" sideWeight="0.67070484" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944787" sideWeight="0.67070484" order="3" side_tool="false" content_ui="tabs" />
@@ -774,7 +775,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/TourInfoWindowAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="25" selection-start="944" selection-end="944" vertical-scroll-proportion="0.026929982">
+        <state line="26" column="25" selection-start="944" selection-end="944" vertical-scroll-proportion="0.02688172">
           <folding />
         </state>
       </provider>

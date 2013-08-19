@@ -22,22 +22,30 @@ import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallback
 import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.ActivityRecognitionClient;
+import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.LocationClient;
+import com.google.android.gms.location.LocationClient.OnAddGeofencesResultListener;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationStatusCodes;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnMapLongClickListener;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.app.Dialog;
 import android.app.PendingIntent;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -51,6 +59,11 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class LocationActivity extends FragmentActivity {
     public static String TAG = "LocationActivity";
@@ -76,13 +89,21 @@ public class LocationActivity extends FragmentActivity {
     private ActivityRecognitionClient mActivityRecognitionClient;
     private ActivityRecognitionCallback mActivityRecognitionCallback = new ActivityRecognitionCallback();
     public static final String ACTION_ACTIVITY_RECOGNITION =
-            "com.android.google.codelab.location.LocationActivity.ACTIVITY_RECOGNITION";
+            "com.example.google.location.LocationActivity.ACTIVITY_RECOGNITION";
     private static final int ACTIVITY_UPDATES_INTERVAL = 4000;
     private PendingIntent mActivityRecognitionPendingIntent;
     private Switch mSwitch;
     private ActivityRecognitionIntentReceiver mActivityRecognitionIntentReceiver;
 
     // Geo Fencing variables
+    private GeoFenceCallback mGeoFenceCallback = new GeoFenceCallback();
+    private int id = 0;
+    private static final float GEOFENCE_RADIUS = 100;
+    private HashMap<String, Circle> mGeoFences;
+    private HashMap<String, Circle> mTriggeringFences;
+    public static final String ACTION_GEOFENCE =
+            "com.example.google.location.LocationActivity.GEOFENCE";
+    private TextView mGeoFenceStatus;
 
     /** Called when the activity is first created. */
     @Override
@@ -139,6 +160,19 @@ public class LocationActivity extends FragmentActivity {
         }
 
         // Initialize Geo Fencing
+        mGeoFenceStatus = (TextView) findViewById(R.id.geo_fence_status);
+
+        if (mGeoFences == null) {
+            mGeoFences = new HashMap<String, Circle>();
+        }
+
+        if (mTriggeringFences == null) {
+            mTriggeringFences = new HashMap<String, Circle>();
+        }
+
+        // Setup map to allow adding Geo Fences
+        mMap.getUiSettings().setAllGesturesEnabled(true);
+        mMap.setOnMapLongClickListener(mGeoFenceCallback);
     }
 
     @Override
@@ -314,6 +348,7 @@ public class LocationActivity extends FragmentActivity {
             }
             mLastLocation = location;
         }
+
     };
 
     private class ActivityRecognitionCallback implements ConnectionCallbacks,
@@ -356,6 +391,152 @@ public class LocationActivity extends FragmentActivity {
             mActivityRecognitionClient.removeActivityUpdates(mActivityRecognitionPendingIntent);
             mActivityRecognitionClient.disconnect();
         }
+    }
+
+    private class GeoFenceCallback implements OnMapLongClickListener,
+            OnAddGeofencesResultListener {
+
+        @Override
+        public void onMapLongClick(LatLng point) {
+            Log.v(LocationActivity.TAG,
+                    "onMapLongClick == " + point.latitude + "," + point.longitude);
+            CircleOptions circleOptions = new CircleOptions();
+            circleOptions.center(point).radius(GEOFENCE_RADIUS).strokeColor(
+                    android.graphics.Color.BLUE).strokeWidth(2);
+            Circle circle = mMap.addCircle(circleOptions);
+            String key = Integer.toString(id);
+            id++;
+            mGeoFences.put(key, circle);
+            addGeoFences();
+        }
+
+        // Creates Geofence objects from all circles on the map and calls
+        // addGeofences API.
+        private void addGeoFences() {
+            List<Geofence> list = new ArrayList<Geofence>();
+            for (Map.Entry<String, Circle> entry : mGeoFences.entrySet()) {
+                Circle circle = entry.getValue();
+                Log.v(LocationActivity.TAG, "points == " +
+                        circle.getCenter().latitude + "," +
+                        circle.getCenter().longitude);
+                Geofence geofence = new Geofence.Builder()
+                        .setRequestId(entry.getKey())
+                        .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER |
+                                Geofence.GEOFENCE_TRANSITION_EXIT)
+                        .setCircularRegion(circle.getCenter().latitude,
+                                circle.getCenter().longitude,
+                                (float) circle.getRadius())
+                        .setExpirationDuration(Geofence.NEVER_EXPIRE).build();
+                list.add(geofence);
+            }
+            if (list.isEmpty()) {
+                return;
+            }
+            // Clear off all the currently triggering geo_fences before new
+            // fences
+            // are added.
+            for (Circle triggeringGeoFence : mTriggeringFences.values()) {
+                triggeringGeoFence.remove();
+            }
+            mTriggeringFences.clear();
+            Log.v(LocationActivity.TAG, "addingGeoFences size = " + list.size());
+            mLocationClient.addGeofences(list, getPendingIntent(), this);
+        }
+
+        private PendingIntent getPendingIntent() {
+            Intent intent = new Intent(ACTION_GEOFENCE);
+            intent.setComponent(new ComponentName(LocationActivity.this,
+                    GeoFenceIntentReceiver.class));
+            return PendingIntent.getBroadcast(LocationActivity.this, 0, intent,
+                    PendingIntent.FLAG_UPDATE_CURRENT);
+        }
+
+        @Override
+        public void onAddGeofencesResult(int statusCode,
+                String[] geofenceRequestIds) {
+            StringBuilder builder = new StringBuilder();
+            for (int i = 0; i < geofenceRequestIds.length - 1; ++i) {
+                builder.append(geofenceRequestIds[i]);
+                builder.append(",");
+            }
+            builder.append(geofenceRequestIds[geofenceRequestIds.length - 1]);
+            Log.v(LocationActivity.TAG, "Added Geofences == "
+                    + statusCodeToString(statusCode) + " " + builder.toString());
+            mGeoFenceStatus.setText("Added Geofences "
+                    + statusCodeToString(statusCode) + " " + builder.toString());
+        }
+
+        private String statusCodeToString(int statusCode) {
+            switch (statusCode) {
+                case LocationStatusCodes.SUCCESS:
+                    return "SUCCESS";
+                case LocationStatusCodes.GEOFENCE_NOT_AVAILABLE:
+                    return "GEOFENCE_NOT_AVAILABLE";
+                case LocationStatusCodes.GEOFENCE_TOO_MANY_GEOFENCES:
+                    return "GEOFENCE_TOO_MANY_GEOFENCES";
+                case LocationStatusCodes.GEOFENCE_TOO_MANY_PENDING_INTENTS:
+                    return "GEOFENCE_TOO_MANY_PENDING_INTENTS";
+                case LocationStatusCodes.ERROR:
+                    return "ERROR";
+            }
+            return "UNKNOWN";
+        }
+    }
+
+    // Triggered when startAcitivity method is called in GeoFenceIntentReceiver.
+    // Updates UI as geofences are entered/exited.
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        // getIntent() should always return the most recent
+        setIntent(intent);
+        boolean receiverStarted =
+                intent.getBooleanExtra("RECEIVER_STARTED", false);
+        if (!receiverStarted) {
+            return;
+        }
+        Bundle bundle = intent.getParcelableExtra("geo_fences");
+        ArrayList<String> requestIds =
+                bundle.getStringArrayList("request_ids");
+        if (requestIds == null) {
+            Log.v(LocationActivity.TAG, "request_ids == null");
+            return;
+        }
+        int transition = intent.getIntExtra("transition", -2);
+
+        for (String requestId : requestIds) {
+            Log.v(LocationActivity.TAG, "Triggering Geo Fence requestId "
+                    + requestId);
+            if (transition == Geofence.GEOFENCE_TRANSITION_ENTER) {
+                Circle circle = mGeoFences.get(requestId);
+                if (circle == null) {
+                    continue;
+                }
+                Log.v(LocationActivity.TAG, "triggering_geo_fences enter == "
+                        + requestId);
+
+                // Add a superimposed red circle when a geofence is entered and
+                // put the corresponding object in triggering_fences.
+                CircleOptions circleOptions = new CircleOptions();
+                circleOptions.center(circle.getCenter())
+                        .radius(circle.getRadius())
+                        .fillColor(Color.argb(100, 100, 0, 0));
+                Circle newCircle = mMap.addCircle(circleOptions);
+                mTriggeringFences.put(requestId, newCircle);
+            } else if (transition == Geofence.GEOFENCE_TRANSITION_EXIT) {
+                Log.v(LocationActivity.TAG, "triggering_geo_fences exit == "
+                        + requestId);
+                Circle circle = mTriggeringFences.get(requestId);
+                if (circle == null) {
+                    continue;
+                }
+                // Remove the superimposed red circle from the map and the
+                // corresponding Circle object from triggering_fences hash_map.
+                circle.remove();
+                mTriggeringFences.remove(requestId);
+            }
+        }
+        return;
     }
 
 }

@@ -19,48 +19,6 @@
     <list default="true" id="c869f94d-3bd0-44f2-8d7f-38da8c893637" name="Default" comment="" />
     <ignored path="android.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367888161832" ignored="false" />
-    <file path="/Dummy.txt" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1369804402084" ignored="false" />
-    <file path="/activity_main.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368486150866" ignored="false" />
-    <file path="/TourMapFragment.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367974530881" ignored="false" />
-    <file path="/MainActivity.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367897729076" ignored="false" />
-    <file path="/PoiFragment.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367379438532" ignored="false" />
-    <file path="/PoiListFragment.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368487129808" ignored="false" />
-    <file path="/styles.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368488191452" ignored="false" />
-    <file path="$PROJECT_DIR$/test-tmp/src/com/example/testtmp/MyActivity.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367446948168" ignored="false" />
-    <file path="$PROJECT_DIR$/test-tmp/res/layout/main.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367446948168" ignored="false" />
-    <file path="$PROJECT_DIR$/test-tmp/res/values/strings.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367446948168" ignored="false" />
-    <file path="$PROJECT_DIR$/testtmp/src/com/example/testtmp/MyActivity.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367447089735" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367447168330" ignored="false" />
-    <file path="/map.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367613794235" ignored="false" />
-    <file path="/color.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367452535193" ignored="false" />
-    <file path="/main.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367620289900" ignored="false" />
-    <file path="/strings.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367897273943" ignored="false" />
-    <file path="$APPLICATION_HOME_DIR$/plugins/android/lib/android.jar!/org/jetbrains/android/android.xsd" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367889429895" ignored="false" />
-    <file path="/TourInfoWindowAdapter.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367529205826" ignored="false" />
-    <file path="/SelectMapTypeDialog.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367909507109" ignored="false" />
-    <file path="/array.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367534807189" ignored="false" />
-    <file path="/AboutDialog.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367898437974" ignored="false" />
-    <file path="/dimen.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368488359300" ignored="false" />
-    <file path="/dialog_about.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367621553779" ignored="false" />
-    <file path="/a.dummy" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367897901426" ignored="false" />
-    <file path="/a.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367896348452" ignored="false" />
-    <file path="/sample.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367896347494" ignored="false" />
-    <file path="/Util.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367910686742" ignored="false" />
-    <file path="$USER_HOME$/iosched/android/src/com/google/android/apps/iosched/ui/SessionsFragment.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367910450577" ignored="false" />
-    <file path="/SqlCursorLoader.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367912832663" ignored="false" />
-    <file path="/TourContract.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367912952308" ignored="false" />
-    <file path="/TourDbHelper.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367913178312" ignored="false" />
-    <file path="/MapLoaderCallbacks.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1367949908613" ignored="false" />
-    <file path="/poilist.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368486463578" ignored="false" />
-    <file path="/tour_simple_list_item_2.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368488362284" ignored="false" />
-    <file path="$PROJECT_DIR$/bin/AndroidManifest.xml" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368490200349" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/example/android/touroflondon/data/TourDbHelper.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368490475875" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/example/android/touroflondon/data/PoiCursorLoader.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368490475875" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/example/android/touroflondon/data/RouteCursorLoader.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368490475875" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/example/android/touroflondon/data/SqlCursorLoader.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368490475875" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/example/android/touroflondon/data/TourContract.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368490475875" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/example/android/touroflondon/data/MapLoaderCallbacks.java" changelist="c869f94d-3bd0-44f2-8d7f-38da8c893637" time="1368490475875" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +82,7 @@
       <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="12" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
+            <state line="25" column="12" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -133,7 +91,7 @@
       <file leaf-file-name="AboutDialog.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/AboutDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="24" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
+            <state line="13" column="24" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1005">
               <folding />
             </state>
           </provider>
@@ -142,7 +100,7 @@
       <file leaf-file-name="Util.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="13" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.5305755">
+            <state line="32" column="7" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.02688172" vertical-offset="315" max-vertical-offset="1335">
               <folding>
                 <element signature="e#0#2996#0" expanded="true" />
               </folding>
@@ -153,7 +111,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0">
+            <state line="34" column="0" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
@@ -162,7 +120,7 @@
       <file leaf-file-name="dimen.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/dimen.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="12" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0">
+            <state line="22" column="12" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
@@ -171,7 +129,7 @@
       <file leaf-file-name="array.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/array.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -180,7 +138,7 @@
       <file leaf-file-name="shadow_left.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/drawable/shadow_left.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="25" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+            <state line="4" column="25" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="435">
               <folding />
             </state>
           </provider>
@@ -188,20 +146,20 @@
       </file>
       <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="android-designer">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="dimen.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values-sw600dp/dimen.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="11" selection-start="700" selection-end="702" vertical-scroll-proportion="0.0">
+            <state line="17" column="11" selection-start="700" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
@@ -250,22 +208,6 @@
     <option name="width" value="1676" />
     <option name="height" value="1028" />
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Abstraction issues</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -292,6 +234,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
@@ -303,28 +255,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="editor" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lesson 3 - Info Windows" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lesson 0 - Getting Started" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.18655851" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="R32CB017F9F" />
@@ -553,15 +495,14 @@
       <workItem from="1367973289006" duration="4604000" />
       <workItem from="1367980863283" duration="13000" />
       <workItem from="1368469560582" duration="16490000" />
-      <workItem from="1368554733387" duration="562000" />
-      <workItem from="1368557863088" duration="285000" />
-      <workItem from="1368741278474" duration="36000" />
-      <workItem from="1369804401522" duration="80000" />
+      <workItem from="1368554675199" duration="57000" />
+      <workItem from="1368741315647" duration="55000" />
+      <workItem from="1369804337019" duration="64000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94785000" />
+    <option name="totallyTimeSpent" value="93998000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -587,23 +528,23 @@
     <frame x="4" y="22" width="1676" height="1028" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944787" sideWeight="0.67070484" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944787" sideWeight="0.67070484" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32857144" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969324" sideWeight="0.078193836" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32637364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969324" sideWeight="0.67180616" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24846625" sideWeight="0.67070484" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24846625" sideWeight="0.67142856" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944787" sideWeight="0.67070484" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944787" sideWeight="0.67070484" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944787" sideWeight="0.67070484" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -676,117 +617,117 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/res/values-sw600dp/dimen.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="11" selection-start="700" selection-end="702" vertical-scroll-proportion="0.0">
+        <state line="17" column="11" selection-start="700" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../libprojects/GooglePlayServices/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/TourMapFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0" />
+        <state line="27" column="0" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values-v16/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
+        <state line="18" column="0" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="30" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-12.222222">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="30" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-12.222222" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/PoiListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="55" selection-start="4323" selection-end="4323" vertical-scroll-proportion="-8.44" />
+        <state line="126" column="55" selection-start="4323" selection-end="4323" vertical-scroll-proportion="-8.44" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0">
+        <state line="34" column="0" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values-sw600dp/dimen.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="11" selection-start="700" selection-end="702" vertical-scroll-proportion="0.0">
+        <state line="17" column="11" selection-start="700" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/dimen.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="12" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0">
+        <state line="22" column="12" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="420">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/array.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable/shadow_left.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="25" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+        <state line="4" column="25" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="435">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/tour_simple_list_item_2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="44" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.7310469">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="44" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.7310469" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="12" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
+        <state line="25" column="12" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/AboutDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
+        <state line="13" column="24" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/android/touroflondon/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="13" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.5305755">
+        <state line="32" column="7" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.02688172" vertical-offset="315" max-vertical-offset="1335">
           <folding>
             <element signature="e#0#2996#0" expanded="true" />
           </folding>
@@ -857,7 +798,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Android|android</last-edited>
+          <last-edited>android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -885,17 +826,6 @@
             <option name="proportions">
               <list>
                 <option value="0.18655851" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

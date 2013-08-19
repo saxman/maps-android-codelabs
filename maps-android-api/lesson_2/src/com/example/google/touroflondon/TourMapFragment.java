@@ -21,20 +21,14 @@ import com.example.google.touroflondon.data.MapLoaderCallbacks;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 
-import android.app.LoaderManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 /** An interactive map fragment that shows a tour of London. */
 public class TourMapFragment extends MapFragment implements MapLoaderCallbacks.MapDataLoader {
@@ -53,15 +47,6 @@ public class TourMapFragment extends MapFragment implements MapLoaderCallbacks.M
 
     /** Starting position for the camera. */
     public static final LatLng LONDON = new LatLng(51.5, -0.12);
-
-    /**
-     * A map from the title of the place to the PointOfInterest object
-     * containing more details about it.
-     */
-    private final Map<String, PointOfInterest> mPoiData = new HashMap<String, PointOfInterest>();
-
-    /** A map from the title of the marker to the marker itself. */
-    private final Map<String, Marker> mPoiMarkers = new HashMap<String, Marker>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -119,11 +104,6 @@ public class TourMapFragment extends MapFragment implements MapLoaderCallbacks.M
 
                 // Disable the on screen zoom controls.
                 mMap.getUiSettings().setZoomControlsEnabled(false);
-
-                // load data
-                LoaderManager lm = getLoaderManager();
-                lm.initLoader(MapLoaderCallbacks.TOKEN_POI, null, mLoaderCallbacks);
-                lm.initLoader(MapLoaderCallbacks.TOKEN_ROUTE, null, mLoaderCallbacks);
             }
         }
     }
@@ -182,20 +162,6 @@ public class TourMapFragment extends MapFragment implements MapLoaderCallbacks.M
      * Called to add a point of interest to the map.
      */
     public void addPoi(PointOfInterest poi) {
-        MarkerOptions options = new MarkerOptions()
-                .position(poi.mLocation)
-                .title(poi.mTitle)
-                .snippet(poi.mDescription);
-
-        // Choose a custom icon for the POI according to its type.
-        options.icon(BitmapDescriptorFactory.fromResource(poi.mType.mResId));
-
-        // Add the marker to the map.
-        Marker marker = mMap.addMarker(options);
-
-        // Add the marker to some data sets.
-        mPoiData.put(marker.getTitle(), poi);
-        mPoiMarkers.put(marker.getTitle(), marker);
     }
 
     /**

@@ -28,7 +28,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.PolylineOptions;
 
 import android.app.LoaderManager;
 import android.app.SearchManager;
@@ -291,12 +290,5 @@ public class TourMapFragment extends MapFragment
      * Called with a list of LatLng route coordinates.
      */
     public void addRoute(ArrayList<LatLng> list) {
-        // Create a Polyline options object describing the polyline.
-        PolylineOptions options = new PolylineOptions()
-                .addAll(list)
-                .color(0xFFCC0000)
-                .width(8);
-        // Add it to the map.
-        mMap.addPolyline(options);
     }
 }

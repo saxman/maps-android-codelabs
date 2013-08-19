@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -18,32 +18,19 @@ package com.example.google.location;
 
 import com.example.google.R;
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
-import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
 import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.location.LocationClient;
-import com.google.android.gms.location.LocationListener;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import android.widget.TextView;
 
 public class LocationActivity extends FragmentActivity {
     public static String TAG = "LocationActivity";
@@ -56,13 +43,8 @@ public class LocationActivity extends FragmentActivity {
     private Dialog errorDialog;
 
     // Location Request variables
-    private LocationClient mLocationClient;
-    private TextView mLocationStatus;
-    private LocationCallback mLocationCallback = new LocationCallback();
-    private Location mLastLocation;
-    private final int LOCATION_UPDATES_INTERVAL = 10000; // Setting 10 sec
-                                                         // interval for
-                                                         // location updates
+
+    // Activity Recognition variables
 
     // Geo Fencing variables
 
@@ -85,15 +67,10 @@ public class LocationActivity extends FragmentActivity {
         }
 
         // Initialize Location Client
-        mLocationStatus = (TextView) findViewById(R.id.location_status);
 
-        if (mLocationClient == null) {
-            mLocationClient = new LocationClient(this, mLocationCallback, mLocationCallback);
-            Log.v(LocationActivity.TAG, "Location Client connect");
-            if (!(mLocationClient.isConnected() || mLocationClient.isConnecting())) {
-                mLocationClient.connect();
-            }
-        }
+        // Initialize Action Recognition
+
+        // Initialize Geo Fencing
     }
 
     @Override
@@ -102,11 +79,6 @@ public class LocationActivity extends FragmentActivity {
 
         // Indicate the application is in background
         isAppForeground = false;
-
-        if (mLocationClient.isConnected()) {
-            mLocationClient.removeLocationUpdates(mLocationCallback);
-            mLocationClient.disconnect();
-        }
     }
 
     @Override
@@ -117,8 +89,6 @@ public class LocationActivity extends FragmentActivity {
         isAppForeground = true;
 
         checkGooglePlayServiceAvailability(ERROR_DIALOG_ON_RESUME_REQUEST_CODE);
-
-        restartLocationClient();
     }
 
     @Override
@@ -153,21 +123,9 @@ public class LocationActivity extends FragmentActivity {
                     init();
                     break;
                 case ERROR_DIALOG_ON_RESUME_REQUEST_CODE:
-                    restartLocationClient();
                     break;
             }
         }
-    }
-
-    private void restartLocationClient() {
-        if (!(mLocationClient.isConnected() || mLocationClient.isConnecting())) {
-            mLocationClient.connect(); // Somehow it becomes connected here
-            return;
-        }
-        LocationRequest request = LocationRequest.create();
-        request.setInterval(LOCATION_UPDATES_INTERVAL);
-        request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        mLocationClient.requestLocationUpdates(request, mLocationCallback);
     }
 
     @Override
@@ -191,83 +149,6 @@ public class LocationActivity extends FragmentActivity {
 
     public void clearMap() {
         mMap.clear();
-        mLastLocation = null;
     }
-
-    private class LocationCallback implements ConnectionCallbacks, OnConnectionFailedListener,
-            LocationListener {
-
-        @Override
-        public void onConnected(Bundle connectionHint) {
-            Log.v(LocationActivity.TAG, "Location Client connected");
-
-            // Display last location
-            Location location = mLocationClient.getLastLocation();
-            if (location != null) {
-                handleLocation(location);
-            }
-
-            // Request for location updates
-            LocationRequest request = LocationRequest.create();
-            request.setInterval(LOCATION_UPDATES_INTERVAL);
-            request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-            mLocationClient.requestLocationUpdates(request, mLocationCallback);
-
-            // Setup map to allow adding Geo Fences
-        }
-
-        @Override
-        public void onDisconnected() {
-            Log.v(LocationActivity.TAG, "Location Client disconnected by the system");
-        }
-
-        @Override
-        public void onConnectionFailed(ConnectionResult result) {
-            Log.v(LocationActivity.TAG, "Location Client connection failed");
-        }
-
-        @Override
-        public void onLocationChanged(Location location) {
-            if (location == null) {
-                Log.v(LocationActivity.TAG, "onLocationChanged: location == null");
-                return;
-            }
-            // Add a marker iff location has changed.
-            if (mLastLocation != null &&
-                    mLastLocation.getLatitude() == location.getLatitude() &&
-                    mLastLocation.getLongitude() == location.getLongitude()) {
-                return;
-            }
-
-            handleLocation(location);
-        }
-
-        private void handleLocation(Location location) {
-            // Update the mLocationStatus with the lat/lng of the location
-            Log.v(LocationActivity.TAG, "LocationChanged == @" +
-                    location.getLatitude() + "," + location.getLongitude());
-            mLocationStatus.setText("Location changed @" + location.getLatitude() + "," +
-                    location.getLongitude());
-
-            // Add a marker of that location to the map
-            LatLng latlongzoom = new LatLng(location.getLatitude(),
-                    location.getLongitude());
-            String snippet = location.getLatitude() + "," + location.getLongitude();
-            Marker marker = mMap.addMarker(
-                    new MarkerOptions().position(latlongzoom));
-            marker.setSnippet(snippet);
-            marker.setTitle(snippet);
-
-            // Center the map to the first marker
-            if (mLastLocation == null) {
-                mMap.moveCamera(CameraUpdateFactory.
-                        newCameraPosition(CameraPosition.fromLatLngZoom(
-                                new LatLng(location.getLatitude(), location.getLongitude()),
-                                (float) 16.0)));
-            }
-            mLastLocation = location;
-        }
-
-    };
 
 }

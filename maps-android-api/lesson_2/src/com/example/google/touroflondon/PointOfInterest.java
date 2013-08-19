@@ -16,7 +16,6 @@
 
 package com.example.google.touroflondon;
 
-import com.example.google.R;
 import com.google.android.gms.maps.model.LatLng;
 
 /**
@@ -28,19 +27,15 @@ public class PointOfInterest {
      * Type of the point of interest.
      */
     public enum Type {
-        MUSEUM(30, R.drawable.marker_museum),
-        SHOPPING(210, R.drawable.marker_mall),
-        LANDMARK(270, R.drawable.marker_landmark);
+        MUSEUM(30),
+        SHOPPING(210),
+        LANDMARK(270);
 
         /** Hue of the marker to use for this type of POI. */
         final float mHue;
 
-        /** ID of the custom drawable to use as the marker image. */
-        final int mResId;
-
-        private Type(float hue, int resId) {
+        private Type(float hue) {
             this.mHue = hue;
-            this.mResId = resId;
         }
     }
 

@@ -16,7 +16,7 @@
 
 package com.example.google.touroflondon;
 
-import com.example.google.R; 
+import com.example.google.R;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 
 import android.app.AlertDialog;

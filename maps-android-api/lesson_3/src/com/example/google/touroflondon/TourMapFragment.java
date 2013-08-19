@@ -27,8 +27,6 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.app.LoaderManager;
-import android.app.SearchManager;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -39,8 +37,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /** An interactive map fragment that shows a tour of London. */
-public class TourMapFragment extends MapFragment
-        implements MapLoaderCallbacks.MapDataLoader, GoogleMap.OnInfoWindowClickListener {
+public class TourMapFragment extends MapFragment implements MapLoaderCallbacks.MapDataLoader {
 
     /** Callbacks for loading data into this TourMapFragment */
     private MapLoaderCallbacks mLoaderCallbacks;
@@ -127,13 +124,6 @@ public class TourMapFragment extends MapFragment
                 LoaderManager lm = getLoaderManager();
                 lm.initLoader(MapLoaderCallbacks.TOKEN_POI, null, mLoaderCallbacks);
                 lm.initLoader(MapLoaderCallbacks.TOKEN_ROUTE, null, mLoaderCallbacks);
-
-                // Set a custom info window adapter.
-                TourInfoWindowAdapter adapter = new TourInfoWindowAdapter(getActivity(), mPoiData);
-                mMap.setInfoWindowAdapter(adapter);
-
-                // Set an on info window click listener.
-                mMap.setOnInfoWindowClickListener(this);
             }
         }
     }
@@ -178,14 +168,6 @@ public class TourMapFragment extends MapFragment
      * @param title The title of the POI.
      */
     public void onPoiSelected(String title) {
-    }
-
-    @Override
-    public void onInfoWindowClick(Marker marker) {
-        // Do a web search for the title of the POI.
-        Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-        intent.putExtra(SearchManager.QUERY, marker.getTitle());
-        startActivity(intent);
     }
 
     /**

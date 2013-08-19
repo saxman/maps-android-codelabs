@@ -18,13 +18,17 @@ package com.example.google.touroflondon;
 
 import com.example.google.R;
 import com.example.google.touroflondon.data.MapLoaderCallbacks;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 import android.app.LoaderManager;
 import android.app.SearchManager;
@@ -36,7 +40,9 @@ import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Random;
 
 /** An interactive map fragment that shows a tour of London. */
 public class TourMapFragment extends MapFragment
@@ -68,6 +74,9 @@ public class TourMapFragment extends MapFragment
 
     /** A map from the title of the marker to the marker itself. */
     private final Map<String, Marker> mPoiMarkers = new HashMap<String, Marker>();
+
+    /** Used for generating random bearings to make camera animations cooler! */
+    private final Random mRandom = new Random();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -175,6 +184,17 @@ public class TourMapFragment extends MapFragment
 
     /** Moves the camera back to a position which includes all the POIs. */
     private void showAllPois() {
+        // Build a bounding box containing all of the POIs.
+        LatLngBounds.Builder builder = LatLngBounds.builder();
+        Iterator<Map.Entry<String, Marker>> iter = mPoiMarkers.entrySet().iterator();
+        while (iter.hasNext()) {
+            Marker m = iter.next().getValue();
+            builder.include(m.getPosition());
+        }
+        // Create a camera update that includes all the POIs with a padding of
+        // 100px.
+        CameraUpdate update = CameraUpdateFactory.newLatLngBounds(builder.build(), 100);
+        mMap.animateCamera(update);
     }
 
     /**
@@ -191,6 +211,25 @@ public class TourMapFragment extends MapFragment
      * @param title The title of the POI.
      */
     public void onPoiSelected(String title) {
+        Marker marker = mPoiMarkers.get(title);
+        if (marker != null) {
+            // Construct a camera position. We use an arbitrary bearing because
+            // it makes the camera animation look
+            // cooler!
+            CameraPosition camera = new CameraPosition.Builder()
+                    .bearing(mRandom.nextFloat() * 360)
+                    .zoom(18f)
+                    .tilt(45f)
+                    .target(marker.getPosition())
+                    .build();
+
+            // Animate the camera to that position using a custom duration of 2
+            // seconds.
+            mMap.animateCamera(CameraUpdateFactory.newCameraPosition(camera), 2000, null);
+
+            // Show the info window.
+            marker.showInfoWindow();
+        }
     }
 
     @Override
@@ -252,5 +291,12 @@ public class TourMapFragment extends MapFragment
      * Called with a list of LatLng route coordinates.
      */
     public void addRoute(ArrayList<LatLng> list) {
+        // Create a Polyline options object describing the polyline.
+        PolylineOptions options = new PolylineOptions()
+                .addAll(list)
+                .color(0xFFCC0000)
+                .width(8);
+        // Add it to the map.
+        mMap.addPolyline(options);
     }
 }

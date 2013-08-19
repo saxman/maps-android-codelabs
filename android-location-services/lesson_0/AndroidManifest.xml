@@ -16,18 +16,13 @@
   -->
   
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.google.codelab.location"
+    package="com.example.google"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="17" />
-
-    <!-- Required permissions for Google Maps Android API v2 -->
-    <permission android:name="com.android.google.codelab.location.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature" />
-    <uses-permission android:name="com.android.google.codelab.location.permission.MAPS_RECEIVE" />
+        android:targetSdkVersion="18" />
     
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -47,7 +42,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".LocationActivity"
+            android:name=".location.LocationActivity"
             android:label="@string/app_name"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:launchMode="singleTask" >
@@ -61,7 +56,7 @@
         <uses-library android:name="com.google.android.maps" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBCdJTO5nEp5xJ7zMse8fiO035pXD0mywc" />
+            android:value="YOUR_API_KEY" />
 
     </application>
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Location Codelab</string>
+    <string name="location">Fused Location</string>
+    <string name="geo_fencing">Geo Fencing</string>
+    <string name="activity_recognition">Activity Recognition</string>
+    <string name="clear_map">Clear Map</string>
+    <string name="enter">You just entered a geofence</string>
+    <string name="leave">You just left a geofence</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/checkpoint_0/checkpoint_0.iml" filepath="$PROJECT_DIR$/checkpoint_0/checkpoint_0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checkpoint_1/checkpoint_1.iml" filepath="$PROJECT_DIR$/checkpoint_1/checkpoint_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checkpoint_2/checkpoint_2.iml" filepath="$PROJECT_DIR$/checkpoint_2/checkpoint_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checkpoint_3/checkpoint_3.iml" filepath="$PROJECT_DIR$/checkpoint_3/checkpoint_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checkpoint_final/checkpoint_final.iml" filepath="$PROJECT_DIR$/checkpoint_final/checkpoint_final.iml" />
+      <module fileurl="file://$PROJECT_DIR$/google-play-services_lib/google-play-services_lib.iml" filepath="$PROJECT_DIR$/google-play-services_lib/google-play-services_lib.iml" />
+    </modules>
+  </component>
+</project>
+

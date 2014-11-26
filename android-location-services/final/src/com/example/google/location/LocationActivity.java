@@ -198,8 +198,10 @@ public class LocationActivity extends FragmentActivity {
         isAppForeground = true;
 
         checkGooglePlayServiceAvailability(ERROR_DIALOG_ON_RESUME_REQUEST_CODE);
-
-        restartLocationClient();
+        
+        if(mLocationClient.isConnected()) {
+            restartLocationClient();
+        }
     }
 
     @Override

@@ -118,7 +118,7 @@ public class LocationActivity extends FragmentActivity {
 
         checkGooglePlayServiceAvailability(ERROR_DIALOG_ON_RESUME_REQUEST_CODE);
         
-        if(mLocationClient.isConnected()) {
+        if (mLocationClient.isConnected()) {
             restartLocationClient();
         }
     }
